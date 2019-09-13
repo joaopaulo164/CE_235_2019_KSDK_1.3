@@ -8,7 +8,7 @@
 **     Repository  : KSDK 1.3.0
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-09-12, 22:33, # CodeGen: 0
+**     Date/Time   : 2019-09-12, 22:53, # CodeGen: 5
 **     Abstract    :
 **
 **     Settings    :
@@ -67,6 +67,7 @@
 /* {Default RTOS Adapter} No RTOS includes */
 #include "Cpu.h"
 #include "Events.h"
+#include "rtos_main_task.h"
 
 
 #ifdef __cplusplus
@@ -107,6 +108,10 @@ void Common_Init(void)
 void Components_Init(void)
 {
 
+  /*! gpio1 Auto initialization start */
+  GPIO_DRV_Init(gpio1_InpConfig0,gpio1_OutConfig0);
+  /*! gpio1 Auto initialization end */
+  
 }
 #endif /* CPU_COMPONENTS_INIT */
 

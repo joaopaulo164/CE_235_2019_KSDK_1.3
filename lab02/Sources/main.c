@@ -31,12 +31,15 @@
 #include "Cpu.h"
 #include "Events.h"
 #include "rtos_main_task.h"
+#include "os_tasks.h"
 #include "clockMan1.h"
 #include "pin_init.h"
 #include "osa1.h"
 #include "free_rtos.h"
 #include "MainTask.h"
 #include "gpio1.h"
+#include "Task1.h"
+#include "Task2.h"
 #if CPU_INIT_CONFIG
   #include "Init_Config.h"
 #endif

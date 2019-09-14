@@ -37,6 +37,8 @@
 #include "free_rtos.h"
 #include "MainTask.h"
 #include "gpio1.h"
+#include "Task1.h"
+#include "Task2.h"
 
 #ifdef __cplusplus
 extern "C" {

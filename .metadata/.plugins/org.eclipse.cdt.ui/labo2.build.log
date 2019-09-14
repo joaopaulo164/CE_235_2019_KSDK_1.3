@@ -1,0 +1,11 @@
+02:50:52 **** Incremental Build of configuration Debug for project labo2 ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "labo2.elf"
+   text	   data	    bss	    dec	    hex	filename
+  18476	    124	  10300	  28900	   70e4	labo2.elf
+Finished building: labo2.siz
+ 
+
+02:50:52 Build Finished (took 422ms)
+

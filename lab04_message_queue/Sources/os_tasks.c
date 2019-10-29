@@ -39,8 +39,10 @@ extern "C" {
 
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
-#include "stdio.h"
-extern msg_queue_t my_msg_queue;
+extern msg_queue_handler_t msg_queue_handler;
+//msg_queue_t queueHandler;
+//extern msg_queue_handler_t queueHandler=MSG_QUEUE_DECLARE();
+//extern xQueueHandle Global_Queue_Handle;
 
 /*
 ** ===================================================================
@@ -54,22 +56,30 @@ extern msg_queue_t my_msg_queue;
 void Task2_task(os_task_param_t task_init_data)
 {
   /* Write your local variable definition here */
-	char *messageToPut = "...";
+	int cont_task2 = 0;
+	osa_status_t status_task2;
+	//char *messageToPut = "...";
+	//struct MESSAGE messageToPut = '...';
 
-  
 #ifdef PEX_USE_RTOS
   while (1) {
 #endif
     /* Write your code here ... */
 
+	  ++cont_task2;
+	  status_task2 = OSA_MsgQPut(msg_queue_handler, &cont_task2);
+	  switch (status_task2) {
+	  case kStatus_OSA_Success:
+		  break;
+	  case kStatus_OSA_Error:
+		  break;
+	  default:
+		  break;
+	  }
+	  OSA_TimeDelay(1000);
 
-	    while (1) {
-	        printf("Producer");
-	        OSA_TimeDelay(500);
-	        OSA_MsgQPut(my_msg_queue, &messageToPut);
-	    }
 
-    //OSA_TimeDelay(10);                 /* Example code (for task release) */
+               /* Example code (for task release) */
    
     
     
@@ -91,22 +101,33 @@ void Task2_task(os_task_param_t task_init_data)
 void Task1_task(os_task_param_t task_init_data)
 {
   /* Write your local variable definition here */
-	char *messageToGet = NULL;
+	int cont_task1 = 0;
+	osa_status_t status_task1;
+	int messageToGet = NULL;
+	//struct MESSAGE messageToGet;
   
+
 #ifdef PEX_USE_RTOS
   while (1) {
 #endif
     /* Write your code here ... */
 
-	    while (1) {
-	        printf("Consumer");
-	        OSA_TimeDelay(500);
-	        OSA_MsgQGet(my_msg_queue, &messageToGet, OSA_WAIT_FOREVER);
-	    }
+	  ++cont_task1;
+	  status_task1 = OSA_MsgQGet(msg_queue_handler, &messageToGet, OSA_WAIT_FOREVER);
+	  switch (status_task1) {
+	  case kStatus_OSA_Success:
+		  messageToGet;
+		  break;
+	  case kStatus_OSA_Error:
+		  break;
+	  default:
+		  break;
+	  }
+	  OSA_TimeDelay(1000);
 
 
     
-    //OSA_TimeDelay(10);                 /* Example code (for task release) */
+                  /* Example code (for task release) */
    
     
     

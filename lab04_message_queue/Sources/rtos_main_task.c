@@ -38,10 +38,12 @@ extern "C" {
 
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
+#include "queue.h"
 
-msg_queue_t my_msg_queue = NULL;
-//msg_queue_handler_t handler;
+msg_queue_t my_msg_queue;
+msg_queue_handler_t msg_queue_handler;
 //MSG_QUEUE_DECLARE(my_message, msg_num, msg_size);
+//xQueueHandle Global_Queue_Handle = 0;
 
 /* Initialization of Processor Expert components function prototype */
 #ifdef MainTask_PEX_RTOS_COMPONENTS_INIT
@@ -60,25 +62,18 @@ extern void PEX_components_init(void);
 void main_task(os_task_param_t task_init_data)
 {
   /* Write your local variable definition here */
-	uint16_t msg_num = NULL;
-	uint16_t msg_size = NULL;
   
   /* Initialization of Processor Expert components (when some RTOS is active). DON'T REMOVE THIS CODE!!! */
 #ifdef MainTask_PEX_RTOS_COMPONENTS_INIT
   PEX_components_init(); 
 #endif 
   /* End of Processor Expert components initialization.  */
+  msg_queue_handler = OSA_MsgQCreate(my_msg_queue, 10, sizeof(int));
 
 #ifdef PEX_USE_RTOS
   while (1) {
 #endif
     /* Write your code here ... */
-
-	  //OSA_SemaCreate(&semargb, 0);
-
-
-	  OSA_MsgQCreate(my_msg_queue, msg_num, msg_size);
-	  //handler = OSA_MsgQCreate(my_message, msg_num, msg_size);
 
     
     

@@ -7,7 +7,7 @@
 **     Version     : Component 1.3.0, Driver 01.00, CPU db: 3.00.000
 **     Repository  : KSDK 1.3.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-07, 16:31, # CodeGen: 5
+**     Date/Time   : 2019-11-12, 10:43, # CodeGen: 46
 **     Contents    :
 **         DbgConsole_Init   - debug_console_status_t DbgConsole_Init(uint32_t uartInstance,uint32_t...
 **         DbgConsole_DeInit - debug_console_status_t DbgConsole_DeInit(void);

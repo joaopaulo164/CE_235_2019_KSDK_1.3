@@ -2,10 +2,10 @@ SDK/platform/devices/startup.o: ../SDK/platform/devices/startup.c \
  ../SDK/platform/devices/startup.h \
  ../SDK/platform/devices/fsl_device_registers.h \
  ../SDK/platform/devices/MKL25Z4/include/MKL25Z4.h \
- C:/Users/john/workspace.kds/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cm0plus.h \
- C:/Users/john/workspace.kds/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cmInstr.h \
- C:/Users/john/workspace.kds/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cmFunc.h \
- C:/Users/john/workspace.kds/lab05_escalonador_fixo/Generated_Code/SDK/platform/devices/MKL25Z4/startup/system_MKL25Z4.h \
+ C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cm0plus.h \
+ C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cmInstr.h \
+ C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cmFunc.h \
+ C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Generated_Code/SDK/platform/devices/MKL25Z4/startup/system_MKL25Z4.h \
  ../SDK/platform/devices/MKL25Z4/include/MKL25Z4_extension.h \
  ../SDK/platform/devices/MKL25Z4/include/MKL25Z4.h \
  ../SDK/platform/devices/MKL25Z4/include/fsl_bitaccess.h \
@@ -17,13 +17,13 @@ SDK/platform/devices/startup.o: ../SDK/platform/devices/startup.c \
 
 ../SDK/platform/devices/MKL25Z4/include/MKL25Z4.h:
 
-C:/Users/john/workspace.kds/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cm0plus.h:
+C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cm0plus.h:
 
-C:/Users/john/workspace.kds/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cmInstr.h:
+C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cmInstr.h:
 
-C:/Users/john/workspace.kds/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cmFunc.h:
+C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/CMSIS/Include/core_cmFunc.h:
 
-C:/Users/john/workspace.kds/lab05_escalonador_fixo/Generated_Code/SDK/platform/devices/MKL25Z4/startup/system_MKL25Z4.h:
+C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Generated_Code/SDK/platform/devices/MKL25Z4/startup/system_MKL25Z4.h:
 
 ../SDK/platform/devices/MKL25Z4/include/MKL25Z4_extension.h:
 

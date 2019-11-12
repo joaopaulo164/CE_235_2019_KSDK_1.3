@@ -79,7 +79,7 @@ void Task1_task(os_task_param_t task_init_data)
   while (1) {
 #endif
     /* Write your code here ... */
-	  debug_printf(TASK1_TASK_NAME " \r\n");
+	  //debug_printf(TASK1_TASK_NAME " \r\n");
 	  OSA_TimeDelay(1000);                 /* Example code (for task release) */
    
     
@@ -107,7 +107,7 @@ void Task2_task(os_task_param_t task_init_data)
   while (1) {
 #endif
 	  /* Write your code here ... */
-	  debug_printf(TASK2_TASK_NAME " \r\n");
+	  //debug_printf(TASK2_TASK_NAME " \r\n");
 	  OSA_TimeDelay(1000);                 /* Example code (for task release) */
    
     
@@ -135,7 +135,7 @@ void Task3_task(os_task_param_t task_init_data)
   while (1) {
 #endif
 	  /* Write your code here ... */
-	  debug_printf(TASK3_TASK_NAME " \r\n");
+	  //debug_printf(TASK3_TASK_NAME " \r\n");
 	  OSA_TimeDelay(1000);                 /* Example code (for task release) */
 
     
@@ -163,7 +163,7 @@ void Task4_task(os_task_param_t task_init_data)
   while (1) {
 #endif
 	  /* Write your code here ... */
-	  debug_printf(TASK4_TASK_NAME " \r\n");
+	  //debug_printf(TASK4_TASK_NAME " \r\n");
 	  OSA_TimeDelay(1000);                 /* Example code (for task release) */
    
     
@@ -191,7 +191,7 @@ void Task5_task(os_task_param_t task_init_data)
   while (1) {
 #endif
 	  /* Write your code here ... */
-	  debug_printf(TASK5_TASK_NAME " \r\n");
+	  //debug_printf(TASK5_TASK_NAME " \r\n");
 	  OSA_TimeDelay(1000);                 /* Example code (for task release) */
 
     
@@ -223,7 +223,7 @@ void Shell_task(os_task_param_t task_init_data)
 #endif
     /* Write your code here ... */
 	  shell_routine();
-	  debug_printf(SHELL_TASK_NAME " \r\n");
+	  //debug_printf(SHELL_TASK_NAME " \r\n");
     
     
     OSA_TimeDelay(100);                 /* Example code (for task release) */

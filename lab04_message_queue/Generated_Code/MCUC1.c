@@ -7,7 +7,7 @@
 **     Version     : Component 01.014, Driver 01.00, CPU db: 3.00.000
 **     Repository  : My Components
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-10-22, 16:20, # CodeGen: 3
+**     Date/Time   : 2019-11-12, 12:05, # CodeGen: 14
 **     Abstract    :
 **          Configures the drivers for various SDKs and APIs used.
 **     Settings    :

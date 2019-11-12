@@ -73,7 +73,7 @@ all: lab05_escalonador_fixo.elf secondary-outputs
 lab05_escalonador_fixo.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -T "C:/Users/john/workspace.kds/lab05_escalonador_fixo/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/john/workspace.kds/lab05_escalonador_fixo/Project_Settings/Linker_Files" -Wl,-Map,"lab05_escalonador_fixo.map" -specs=nosys.specs -specs=nano.specs -Xlinker -z -Xlinker muldefs -o "lab05_escalonador_fixo.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -T "C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Project_Settings/Linker_Files" -Wl,-Map,"lab05_escalonador_fixo.map" -specs=nosys.specs -specs=nano.specs -Xlinker -z -Xlinker muldefs -o "lab05_escalonador_fixo.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

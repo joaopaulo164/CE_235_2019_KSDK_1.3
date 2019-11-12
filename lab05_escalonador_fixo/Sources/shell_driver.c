@@ -1,15 +1,11 @@
-#include "shell_driver.h"
-
 #include "stdint.h"
 #include "Cpu.h"
 #include "Events.h"
 #include "rtos_main_task.h"
 #include "os_tasks.h"
 #include "task.h"
+#include "shell_driver.h"
 
-/*
- * Menu text definition
- */
 char initialMenu[] = "\
 InitialMenu\r\n\
 Shell Commands \r\n\
@@ -19,53 +15,31 @@ Shell Commands \r\n\
 3 - Resume \n\r\
 ";
 
-char systemRunningMessage[] = "\
-System is running.\n\r\
-";
-
-char systemSuspendedMessage[] = "\
-System is currently suspended.\n\r\
-";
-
-typedef enum {
-	SYSTEM_SUSPENDED,
-	SYSTEM_RUNNING,
-} systemStateEnum_t;
-
-
-/*
- * Definition of machine's states.
- */
-typedef enum {
-	PRINTING_MENU,
-	WAIT_COMMAND,
-	SUSPENDING_OS,
-	RESUMMING_OS,
-	SHOW_TASK_STATES,
-	PRINTING_REAL_TIME_LOG,
-	EXIT_MACHINE
-} shellStateEnum_t;
-
-#define		MAIN_TASK_ENTRY_POINT_NAME						"main_task"
-#define		SHELL_TASK_ENTRY_POINT_NAME						"Shell_task"
-#define		TASK1_TASK_ENTRY_POINT_NAME						"Task1_task"
-#define		TASK2_TASK_ENTRY_POINT_NAME						"Task2_task"
-#define		IDLE_TASK_ENTRY_POINT_NAME						"prvIdleTask"
-#define		TMRSVC_TASK_ENTRY_POINT_NAME					"prvTimerTask"
-
-#define		TASK_STATUS_RUNNING										"running"
-#define		TASK_STATUS_READY										"ready"
-#define		TASK_STATUS_BLOCKED										"blocked"
-#define		TASK_STATUS_SUSPENDED									"suspended"
-#define		TASK_STATUS_DELETED										"deleted"
-
-/*
- * Machine state control variables.
- */
-static shellStateEnum_t state = PRINTING_MENU;
-static systemStateEnum_t systemState = SYSTEM_RUNNING;
-
 void shell_routine(void) {
+	char option = 0;
+	do {
+		debug_printf("%s", initialMenu);
+		option = debug_getchar();
+		switch (option) {
+			case 1:
+				debug_printf("Option 1");
+				//vTaskSuspendAll();
+				break;
+			case 2:
+				debug_printf("Option 2");
+
+				break;
+			case 3:
+				debug_printf("Option 3");
+
+				break;
+			default:
+				break;
+		}
+
+		break;
+	} while (1);
+
 	TaskStatus_t *pxTaskStatusArray;
 	volatile UBaseType_t uxArraySize, x;
 	unsigned long ulTotalRunTime;
@@ -89,57 +63,57 @@ void shell_routine(void) {
 		/* Avoid divide by zero errors. */
 		if( ulTotalRunTime > 0 )
 		{
-			debug_printf( "TASK NAME     ID    PRIORITY     STATUS     TCOMP\n\r\n\r");
+			debug_printf( "TASK NAME     ID    PRIORITY     STATUS     TCOMP \n\r\n\r");
 			/* For each populated position in the pxTaskStatusArray array,
 					 format the raw data as human readable ASCII data. */
 			for( x = 0; x < uxArraySize; x++ )
 			{
-				char* entryPoint = 0;
 				char* taskStatus = 0;
-
-				switch(pxTaskStatusArray[ x ].xTaskNumber) {
-				case 1:
-					entryPoint = MAIN_TASK_ENTRY_POINT_NAME;
-					break;
-				case 2:
-					entryPoint = IDLE_TASK_ENTRY_POINT_NAME;
-					break;
-				case 3:
-					entryPoint = TMRSVC_TASK_ENTRY_POINT_NAME;
-					break;
-				case 4:
-					entryPoint = TASK1_TASK_ENTRY_POINT_NAME;
-					break;
-				case 5:
-					entryPoint = TASK2_TASK_ENTRY_POINT_NAME;
-					break;
-				case 6:
-					entryPoint = SHELL_TASK_ENTRY_POINT_NAME;
-					break;
-				}
 
 				switch(pxTaskStatusArray[ x ].eCurrentState) {
 				case eRunning:
-					taskStatus = TASK_STATUS_RUNNING;
+					taskStatus = "RUNNING";
 					break;
 				case eReady:
-					taskStatus = TASK_STATUS_READY;
+					taskStatus = "READY";
 					break;
 				case eBlocked:
-					taskStatus = TASK_STATUS_BLOCKED;
+					taskStatus = "BLOCKED";
 					break;
 				case eSuspended:
-					taskStatus = TASK_STATUS_SUSPENDED;
+					taskStatus = "SUSPENDED";
 					break;
 				case eDeleted:
-					taskStatus = TASK_STATUS_DELETED;
+					taskStatus = "DELETED";
+					break;
+				default:
+					taskStatus = "FAILED";
 					break;
 				}
 
-				debug_printf( "%s         %d        %d        %s        %d\n\r",
+				char* taskPriority;
+
+				switch(pxTaskStatusArray[ x ].uxCurrentPriority) {
+				case 1:
+					taskPriority = "LOWEST";
+					break;
+				case 2:
+					taskPriority = "LOW";
+					break;
+				case 3:
+					taskPriority = "REGULAR";
+					break;
+				case 4:
+					taskPriority = "MEDIUM";
+					break;
+				case 5:
+					taskPriority = "HIGH";
+				}
+
+				debug_printf( "%s       %d        %s        %s        %d\n\r",
 						pxTaskStatusArray[ x ].pcTaskName,
 						pxTaskStatusArray[ x ].xTaskNumber,
-						pxTaskStatusArray[ x ].uxCurrentPriority,
+						taskPriority,
 						taskStatus,
 						pxTaskStatusArray[ x ].ulRunTimeCounter );
 			}
@@ -147,7 +121,7 @@ void shell_routine(void) {
 
 		/* The array is no longer needed, free the memory it consumes. */
 		vPortFree( pxTaskStatusArray );
-		debug_printf("\n\rPress any key to continue...\n\r");
+
 	}
 
 

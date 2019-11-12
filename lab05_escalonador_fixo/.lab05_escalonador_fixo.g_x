@@ -157,7 +157,7 @@
       <File Name="SDK/platform/system/src/clock/MKL25Z4/fsl_clock_MKL25Z4.c" FileDate="2019-11-05, 17:13:10" FileAge="1572984790611" FileType="1048576" CompNumb="2" />
       <File Name="Generated_Code/SDK/platform/devices/MKL25Z4/startup/system_MKL25Z4.h" FileDate="2019-11-05, 17:13:10" FileAge="1572984790970" FileType="45637" CompNumb="2" />
       <File Name="SDK/platform/devices/MKL25Z4/startup/system_MKL25Z4.c" FileDate="2019-11-05, 17:13:10" FileAge="1572984790861" FileType="1048576" CompNumb="1" />
-      <File Name="ProjectInfo.xml" FileDate="2019-11-12, 10:43:39" FileAge="1573566219747" FileType="45637" />
+      <File Name="ProjectInfo.xml" FileDate="2019-11-12, 15:23:41" FileAge="1573583021196" FileType="45637" />
       <File Name="SDK/platform/system/src/clock/fsl_clock_manager_common.c" FileDate="2019-11-05, 17:13:10" FileAge="1572984790611" FileType="1048576" CompNumb="2" />
       <File Name="Generated_Code/hardware_init.c" FileDate="2019-11-12, 10:43:38" FileAge="1573566218218" FileType="45637" CompNumb="7" />
       <File Name="Generated_Code/Task5.h" FileDate="2019-11-12, 10:43:37" FileAge="1573566217866" FileType="45637" CompNumb="25" />
@@ -166,7 +166,7 @@
       <File Name="SDK/platform/hal/inc/fsl_osc_hal.h" FileDate="2019-11-05, 17:13:10" FileAge="1572984790579" FileType="1048576" CompNumb="5" />
       <File Name="SDK/platform/devices/fsl_device_registers.h" FileDate="2019-11-05, 17:13:10" FileAge="1572984790751" FileType="1048576" CompNumb="1" />
       <File Name="SDK/rtos/FreeRTOS/src/queue.c" FileDate="2019-11-05, 17:14:44" FileAge="1572984884070" FileType="1048576" CompNumb="14" />
-      <File Name="SDK/rtos/FreeRTOS/src/tasks.c" FileDate="2019-11-11, 20:05:45" FileAge="1573513545472" FileType="1048576" CompNumb="14" />
+      <File Name="SDK/rtos/FreeRTOS/src/tasks.c" FileDate="2019-11-12, 16:04:31" FileAge="1573585471450" FileType="1048576" CompNumb="14" />
       <File Name="Generated_Code/Task5.c" FileDate="2019-11-12, 10:43:37" FileAge="1573566217805" FileType="45637" CompNumb="25" />
       <File Name="Generated_Code/Task4.h" FileDate="2019-11-12, 10:43:37" FileAge="1573566217962" FileType="45637" CompNumb="24" />
       <File Name="SDK/rtos/FreeRTOS/src/heap_4.c" FileDate="2019-11-05, 17:14:44" FileAge="1572984884039" FileType="1048576" CompNumb="14" />
@@ -174,7 +174,7 @@
       <File Name="SDK/rtos/FreeRTOS/include/projdefs.h" FileDate="2019-11-05, 17:14:43" FileAge="1572984883851" FileType="1048576" CompNumb="14" />
       <File Name="Generated_Code/Task4.c" FileDate="2019-11-12, 10:43:37" FileAge="1573566217926" FileType="45637" CompNumb="24" />
       <File Name="Generated_Code/Task3.h" FileDate="2019-11-12, 10:43:38" FileAge="1573566218033" FileType="45637" CompNumb="23" />
-      <File Name="Sources/main.c" FileDate="2019-11-11, 20:03:31" FileAge="1573513411366" FileType="128" />
+      <File Name="Sources/main.c" FileDate="2019-11-12, 15:48:09" FileAge="1573584489794" FileType="128" />
       <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2019-11-05, 17:13:10" FileAge="1572984790892" FileType="45637" CompNumb="1" />
       <File Name="SDK/rtos/FreeRTOS/src/heap_3.c" FileDate="2019-11-05, 17:14:44" FileAge="1572984884039" FileType="1048576" CompNumb="14" />
       <File Name="Generated_Code/Task3.c" FileDate="2019-11-12, 10:43:37" FileAge="1573566217998" FileType="45637" CompNumb="23" />
@@ -228,7 +228,7 @@
       <File Name="Sources/os_tasks.h" FileDate="2019-11-11, 20:03:31" FileAge="1573513411458" FileType="131328" />
       <File Name="Sources/rtos_main_task.h" FileDate="2019-11-11, 20:03:31" FileAge="1573513411449" FileType="131328" />
       <File Name="SDK/rtos/FreeRTOS/port/gcc/portTicks.h" FileDate="2019-11-05, 17:14:43" FileAge="1572984883976" FileType="1048576" CompNumb="14" />
-      <File Name="Sources/os_tasks.c" FileDate="2019-11-12, 01:37:54" FileAge="1573533474779" FileType="131328" />
+      <File Name="Sources/os_tasks.c" FileDate="2019-11-12, 11:58:55" FileAge="1573570735016" FileType="131328" />
       <File Name="SDK/platform/system/src/interrupt/fsl_interrupt_manager.c" FileDate="2019-11-05, 17:13:10" FileAge="1572984790657" FileType="1048576" CompNumb="11" />
       <File Name="Sources/rtos_main_task.c" FileDate="2019-11-12, 01:37:08" FileAge="1573533428836" FileType="131328" />
       <File Name="SDK/rtos/FreeRTOS/src/timers.c" FileDate="2019-11-05, 17:14:44" FileAge="1572984884101" FileType="1048576" CompNumb="14" />
@@ -273,5 +273,5 @@
       <File Name="Documentation/doxygen/lab05_escalonador_fixo_project.txt" FileDate="2019-11-05, 17:13:10" FileAge="1572984790923" FileType="45637" CompNumb="1" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>49</CodeGenReference>
+  <CodeGenReference>51</CodeGenReference>
 </CodeGenerationInfo>

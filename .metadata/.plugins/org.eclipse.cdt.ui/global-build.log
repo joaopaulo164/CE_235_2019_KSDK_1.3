@@ -1,9 +1,9 @@
-11:58:58 **** Incremental Build of configuration Debug for project lab05_escalonador_fixo ****
+19:53:39 **** Incremental Build of configuration Debug for project lab05_escalonador_fixo ****
 make all 
-Building file: ../Sources/os_tasks.c
+Building file: ../Sources/shell_driver.c
 Invoking: Cross ARM C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D"CPU_MKL25Z128VLK4" -D"FSL_RTOS_FREE_RTOS" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/hal/inc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/hal/src/sim/MKL25Z4" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/system/src/clock/MKL25Z4" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/system/inc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/osa/inc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/CMSIS/Include" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/devices" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/devices/MKL25Z4/include" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/utilities/src" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/utilities/inc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/devices/MKL25Z4/startup" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Generated_Code/SDK/platform/devices/MKL25Z4/startup" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Sources" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Generated_Code" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/rtos/FreeRTOS/include" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/rtos/FreeRTOS/port/gcc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Generated_Code/SDK/rtos/FreeRTOS/config" -std=c99 -MMD -MP -MF"Sources/os_tasks.d" -MT"Sources/os_tasks.o" -c -o "Sources/os_tasks.o" "../Sources/os_tasks.c"
-Finished building: ../Sources/os_tasks.c
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D"CPU_MKL25Z128VLK4" -D"FSL_RTOS_FREE_RTOS" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/hal/inc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/hal/src/sim/MKL25Z4" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/system/src/clock/MKL25Z4" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/system/inc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/osa/inc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/CMSIS/Include" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/devices" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/devices/MKL25Z4/include" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/utilities/src" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/utilities/inc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/platform/devices/MKL25Z4/startup" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Generated_Code/SDK/platform/devices/MKL25Z4/startup" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Sources" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Generated_Code" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/rtos/FreeRTOS/include" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/SDK/rtos/FreeRTOS/port/gcc" -I"C:/Users/john/workspace.kds/CE_235_2019_KSDK_1.3/lab05_escalonador_fixo/Generated_Code/SDK/rtos/FreeRTOS/config" -std=c99 -MMD -MP -MF"Sources/shell_driver.d" -MT"Sources/shell_driver.o" -c -o "Sources/shell_driver.o" "../Sources/shell_driver.c"
+Finished building: ../Sources/shell_driver.c
  
 Building target: lab05_escalonador_fixo.elf
 Invoking: Cross ARM C++ Linker
@@ -13,14 +13,14 @@ Finished building target: lab05_escalonador_fixo.elf
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "lab05_escalonador_fixo.elf"
    text	   data	    bss	    dec	    hex	filename
-  24320	    204	  10348	  34872	   8838	lab05_escalonador_fixo.elf
+  24544	    204	  10356	  35104	   8920	lab05_escalonador_fixo.elf
 Finished building: lab05_escalonador_fixo.siz
  
-11:59:17 **** Incremental Build of configuration Debug for project lab05_escalonador_fixo ****
+19:53:55 **** Incremental Build of configuration Debug for project lab05_escalonador_fixo ****
 make all 
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "lab05_escalonador_fixo.elf"
    text	   data	    bss	    dec	    hex	filename
-  24320	    204	  10348	  34872	   8838	lab05_escalonador_fixo.elf
+  24544	    204	  10356	  35104	   8920	lab05_escalonador_fixo.elf
 Finished building: lab05_escalonador_fixo.siz
  
